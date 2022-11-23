@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#03A9F4"
+    tools:context=".SettingsActivity">
+
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="729dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/up_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_upper_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Üst Limit Ayarları"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.106" />
+
+            <EditText
+                android:id="@+id/editTextNumberSigned_upper_value"
+                android:layout_width="142dp"
+                android:layout_height="56dp"
+                android:ems="10"
+                android:inputType="numberSigned"
+                android:textColor="#ffffff"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_upper_title"
+                app:layout_constraintVertical_bias="0.25" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_upper_minus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#FF0000"
+                android:text="eksi"
+                android:textColor="#FFFFFF"
+                app:layout_constraintBottom_toBottomOf="@+id/editTextNumberSigned_upper_value"
+                app:layout_constraintEnd_toStartOf="@+id/editTextNumberSigned_upper_value"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/editTextNumberSigned_upper_value" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_upper_plus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00FF00"
+                android:text="artı"
+                android:textColor="#FFFFFF"
+                app:layout_constraintBottom_toBottomOf="@+id/editTextNumberSigned_upper_value"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/editTextNumberSigned_upper_value"
+                app:layout_constraintTop_toTopOf="@+id/editTextNumberSigned_upper_value" />
+
+            <CheckBox
+                android:id="@+id/checkBox_upper_vib"
+                android:layout_width="142dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Titreşim Uyarısı"
+                android:textColor="#ffffff"
+                app:layout_constraintEnd_toEndOf="@+id/editTextNumberSigned_upper_value"
+                app:layout_constraintStart_toStartOf="@+id/editTextNumberSigned_upper_value"
+                app:layout_constraintTop_toBottomOf="@+id/editTextNumberSigned_upper_value" />
+
+            <CheckBox
+                android:id="@+id/checkBox_upper_sound"
+                android:layout_width="142dp"
+                android:layout_height="wrap_content"
+                android:text="Sesli Uyarı"
+                android:textColor="#ffffff"
+                app:layout_constraintEnd_toEndOf="@+id/checkBox_upper_vib"
+                app:layout_constraintStart_toStartOf="@+id/checkBox_upper_vib"
+                app:layout_constraintTop_toBottomOf="@+id/checkBox_upper_vib" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/low_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_lower_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Alt Limit Ayarları"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.106" />
+
+            <EditText
+                android:id="@+id/editTextNumberSigned_lower_value"
+                android:layout_width="142dp"
+                android:layout_height="56dp"
+                android:ems="10"
+                android:inputType="numberSigned"
+                android:textColor="#ffffff"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_lower_title"
+                app:layout_constraintVertical_bias="0.25" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_lower_minus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#FF0000"
+                android:text="EKSI"
+                android:textColor="#FFFFFF"
+                app:layout_constraintBottom_toBottomOf="@+id/editTextNumberSigned_lower_value"
+                app:layout_constraintEnd_toStartOf="@+id/editTextNumberSigned_lower_value"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/editTextNumberSigned_lower_value" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_lower_plus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00FF00"
+                android:text="ARTI"
+                android:textColor="#FFFFFF"
+                app:layout_constraintBottom_toBottomOf="@+id/editTextNumberSigned_lower_value"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/editTextNumberSigned_lower_value"
+                app:layout_constraintTop_toTopOf="@+id/editTextNumberSigned_lower_value" />
+
+            <CheckBox
+                android:id="@+id/checkBox_lower_vib"
+                android:layout_width="142dp"
+                android:layout_height="wrap_content"
+                android:text="Ttireşim Uyarısı"
+                android:textColor="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="@+id/editTextNumberSigned_lower_value"
+                app:layout_constraintStart_toStartOf="@+id/editTextNumberSigned_lower_value"
+                app:layout_constraintTop_toBottomOf="@+id/editTextNumberSigned_lower_value" />
+
+            <CheckBox
+                android:id="@+id/checkBox_lower_sound"
+                android:layout_width="142dp"
+                android:layout_height="wrap_content"
+                android:text="Sesli Uyarı"
+                android:textColor="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="@+id/checkBox_lower_vib"
+                app:layout_constraintStart_toStartOf="@+id/checkBox_lower_vib"
+                app:layout_constraintTop_toBottomOf="@+id/checkBox_lower_vib" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
